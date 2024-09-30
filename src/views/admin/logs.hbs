@@ -1,0 +1,51 @@
+<div class="row">
+
+    <div id="page-title">
+        <div class="col-xs-4">
+            <h2 class="pull-left">Logs </h2>
+
+        </div>
+        <div class="col-xs-8">
+            <button class="btn btn-primary pull-right" data-ng-click="updateLogs()"><span>{[{newLogCount}]} новых журналов</span>
+            </button>
+        </div>
+
+        <div class="col-xs-12">
+            <table class="table log-table  log-table-heading">
+                <tbody>
+                <tr>
+                    <th>Время</th>
+                    <th>Уровень</th>
+                    <th>Сообщение о событии</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="log-container">
+            <table class="table log-table">
+
+                <tbodytbody>
+                    <tr ng-repeat="logEntry in logs">
+                        <td>{[{logEntry.timestamp | date:'HH:mm:ss.sss'}]}</td>
+                        <td>{[{logEntry.title}]}</td>
+
+
+                        <td>{[{logEntry.args | log }]}</td>
+                    </tr>
+
+                </tbodytbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+

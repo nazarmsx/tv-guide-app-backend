@@ -1,0 +1,39 @@
+.log-table .td {
+    padding: 4px;
+}
+
+.log-table > tbody > tr > td, .log-table > tbody > tr > th, .log-table > tfoot > tr > td, .log-table > tfoot > tr > th, .log-table > thead > tr > td, .log-table > thead > tr > th {
+    padding: 5px;
+    border: 0;
+}
+
+.log-table {
+    font-size: 14px;
+}
+
+.log-container {
+    max-height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    background: white;
+}
+
+#page-content {
+    background: #ECEFF1;
+}
+
+form .thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+.log-table-heading {
+    margin-bottom: 10px;
+}

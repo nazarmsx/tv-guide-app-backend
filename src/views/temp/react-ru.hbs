@@ -1,0 +1,226 @@
+["b","d",["a","c","e"],"b","a","b","a","b",["b","e"],"c","a","b","a",["b","d","e"],"c"]
+<!-- Question 1 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">1.Какую часть шаблона проектирования <i>MVC</i> реализует <b>React.js?</b></div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q1" value="a"> React - это полноценный MVC-фреймворк</label></li>
+            <li><label><input type="radio" name="q1" value="b"> React предназначен для работы с "view" частью </label>
+            </li>
+            <li><label><input type="radio" name="q1" value="c"> React является «контроллером» с точки зрения MVC</label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 2 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">2. Какой шаблонизатор можно использовать в <b>React</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q2" value="a"> HBS</label></li>
+            <li><label><input type="radio" name="q2" value="b"> EJS</label></li>
+            <li><label><input type="radio" name="q2" value="c"> XML</label></li>
+            <li><label><input type="radio" name="q2" value="d">В React вы не должны использовать какой-либо
+                шаблонизатор. Для рендеринга HTML используется JSX (расширение синтаксиса JS).</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 3 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">3. Какие из этих методов жизненного цикла компонента существуют в
+        <b>React.js</b>?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q3" value="a"> render</label></li>
+            <li><label><input type="checkbox" name="q3" value="b"> mounted</label></li>
+            <li><label><input type="checkbox" name="q3" value="c"> componentDidMount</label></li>
+            <li><label><input type="checkbox" name="q3" value="d"> destroyed</label></li>
+            <li><label><input type="checkbox" name="q3" value="e"> shouldComponentUpdate</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 4 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">4. Перерисовывает ли <b>React</b> всё <i>view</i> когда изминелись <i>props</i>
+        или состояние?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q4" value="a"> Да. React.js распространяет событие на все дерево
+                компонентов, и они вызывают метод render.</label></li>
+            <li><label><input type="radio" name="q4" value="b"> Нет. React только повторно рендерит только измененный
+                компонент.</label></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Question 5 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">5. Какой метод компонента следует использовать для кастомной логики для
+        реагирования на изменения?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q5" value="a"> shouldComponentUpdate</label></li>
+            <li><label><input type="radio" name="q5" value="b"> getSnapshotBeforeUpdate</label></li>
+            <li><label><input type="radio" name="q5" value="c"> componentWillUpdate</label></li>
+            <li><label><input type="radio" name="q5" value="d"> componentWillMount</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 6 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">6. Что можно передать как второй аргумент в метод <b>setState</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q6" value="a"> свойства, которые должны быть обновлены </label></li>
+            <li><label><input type="radio" name="q6" value="b"> функцую обратного вызова для получения нового состояния
+            </label></li>
+            <li><label><input type="radio" name="q6" value="c"> предыдущее состояние</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 7 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">6. Какой атрибут обязателен при рендеринге компонентов списка?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q7" value="a"> key </label></li>
+            <li><label><input type="radio" name="q7" value="b"> index </label></li>
+            <li><label><input type="radio" name="q7" value="c"> data-index</label></li>
+            <li><label><input type="radio" name="q7" value="d"> key</label></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Question 8 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">8. Будет ли следующий код обработки события клика работать в <b>React</b>?</div>
+    <pre class="code javascript" lang="xml">&#x3C;button onclick=&#x22;deleteUser()&#x22;&#x3E;
+Delete user
+&#x3C;/button&#x3E;</pre>
+
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q8" value="a"> Да. Это правильный синтаксис React.js для обработки
+                событий кликов.</label></li>
+            <li><label><input type="radio" name="q8" value="b"> Нет. React использует немного другой синтаксис.: <b>onClick={activateLasers}</b></label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 9 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">9. Какое из этих утверждений относительно <b>props</b> истины?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q9" value="a"> Вы не можете передать объект в props</label></li>
+            <li><label><input type="checkbox" name="q9" value="b"> props только для чтения</label></li>
+            <li><label><input type="checkbox" name="q9" value="c"> React автоматически проверяет переданны ли
+                необходимые props</label></li>
+            <li><label><input type="checkbox" name="q9" value="d"> дочерний компонент наследует props родительского
+                компонента</label></li>
+            <li><label><input type="checkbox" name="q9" value="e"> метод componentWillReceiveProps объявлен как
+                deprecated</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 10 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">10. Что такое <b>React.PureComponent</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q10" value="a"> это базовый класс всех компонентов React</label></li>
+            <li><label><input type="radio" name="q10" value="b"> React.PureComponent - это компонент, у которого нет
+                метода render.</label></li>
+            <li><label><input type="radio" name="q10" value="c"> React.PureComponent почти такой же, как
+                React.Component. Основное отличие состоит в том, что первый не реализует метод shouldComponentUpdate ()</label>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Question 11 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">11. Какой метод любого React компонента вызывается первым?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q11" value="a"> constructor</label></li>
+            <li><label><input type="radio" name="q11" value="b"> componentWillMount</label></li>
+            <li><label><input type="radio" name="q11" value="c"> componentDidMount</label></li>
+            <li><label><input type="radio" name="q11" value="d"> render</label></li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- Question 12 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">12. Что такое подъем состояния вверх?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q12" value="a"> Обновление props родительского элемента .</label></li>
+            <li><label><input type="radio" name="q12" value="b"> Процесс подъема состояния изменившегося компонента до
+                ближайшего общего предка, чтобы обновить необходимые компоненты.</label></li>
+            <li><label><input type="radio" name="q12" value="c"> Обновление состояния дочерних компонентов</label></li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- Question 13 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">13. Как создать компонент React без наследования класса <b>React.Component</b>?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q13" value="a"> Используюя метод ReactDOM.render</label></li>
+            <li><label><input type="radio" name="q13" value="b"> Это невозможно. Все компоненты React должны наследовать
+                React.Component </label></li>
+            <li><label><input type="radio" name="q13" value="c"> Используюя метод React.createElement</label></li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- Question 14 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">14. Какие факты о <b>Flux</b> истины?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q14" value="a"> Flux является частью React</label></li>
+            <li><label><input type="checkbox" name="q14" value="b"> Flux - это архитектура приложений, которая дополняет
+                React и концепцию однонаправленного потока данных</label></li>
+            <li><label><input type="checkbox" name="q14" value="c"> React приложение нельзя писать без Flux</label></li>
+            <li><label><input type="checkbox" name="q14" value="d"> Redux - наиболее широко используемая реализация Flux</label>
+            </li>
+            <li><label><input type="checkbox" name="q14" value="e"> Основными компонентами Flux являются
+                Dispatcher,Stores,Views,Actions</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 15 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">15. Что такое props.children?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q15" value="a"> Это хранилище ключ-значение всех props, переданных
+                дочерним компонентам. </label></li>
+            <li><label><input type="radio" name="q15" value="b"> Это переменная, которая содержит ссылки на дочерние
+                компоненты.</label></li>
+            <li><label><input type="radio" name="q15" value="c"> Это переменная, которая содержит содержимое между
+                открывающим и закрывающим тегами компонента.</label></li>
+
+        </ul>
+    </div>
+</div>

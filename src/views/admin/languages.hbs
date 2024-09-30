@@ -1,0 +1,127 @@
+<div class="row">
+
+    <div id="page-title">
+        <div class="col-xs-4">
+            <h2 class="pull-left">Languages </h2>
+
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-success pull-right" data-ng-click="editUser({},'add')"><i class="fa fa-plus "></i>
+                Add language
+            </button>
+        </div>
+        <div class="col-xs-4">
+            <div class="form-group pull-right">
+
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" ng-model="searchFish"
+                           placeholder="Search">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-xs-12" ng-show="allItems.length">
+        <div class="table-responsive table-pad">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+
+                    <th ng-click="sortType = 'code'; sortReverse = !sortReverse">Code
+
+                        <span ng-show="sortType == 'code' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'code' && sortReverse" class="fa fa-caret-up"></span>
+                    </th>
+
+                    <th ng-click="sortType = 'name'; sortReverse = !sortReverse">
+                        Name Eng
+                        <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                    </th>
+                    <th ng-click="sortType = 'nativeName'; sortReverse = !sortReverse">
+                        Name ISO
+                        <span ng-show="sortType == 'nativeName' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'nativeName' && sortReverse" class="fa fa-caret-up"></span>
+                    </th>
+
+                    <th>{[{tranlations['actions']}]}</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in (filteredItems=(allItems | orderBy:sortType:sortReverse | filter:searchFish  )| limitTo:items_per_page:(currentPage - 1) * items_per_page)">
+                    <td>{[{item.code}]}</td>
+                    <td>{[{item.name}]}</td>
+                    <td>{[{item.nativeName}]}</td>
+
+                    <td class="text-center">
+
+                        <button type="button" ng-click="deleteUser(item)" ng-disabled="item.code=='en'"
+                                class="btn btn-danger btn-circle">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </button>
+
+                    </td>
+
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-12" ng-show="allItems.length">
+        <ul uib-pagination data-total-items="filteredItems.length" ng-model="currentPage" ng-change="pageChanged()"
+            max-size="10" boundary-link-numbers="true" rotate="false" data-items-per-page="items_per_page"></ul>
+
+    </div>
+
+</div>
+
+
+<script type="text/ng-template" id="editLang.html">
+
+
+    <div class="modal-header">
+        <button type="button" class="close" data-ng-click="cancel()" aria-hidden="true">×</button>
+        <h3 class="modal-title">Add language</h3>
+    </div>
+    <div class="modal-body">
+        <form sf-schema="schema" sf-form="form" sf-model="model"></form>
+
+        <form name="myform" novalidate autocomplete="off">
+
+            <div class="row">
+                <input type="password" style="display:none;">
+
+
+                <div class="col-xs-4">
+                    <div class="form-group">
+
+                        <div class="form-group">
+                            <label for="">Select lang</label>
+                            <input id="lang" type="text" ng-model="lang" class="  form-control  ">
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+        <button type="button" class="btn btn-primary" data-ng-click="ok()" ng-disabled="lang_code==null">Add lang
+        </button>
+
+    </div>
+</script>

@@ -1,0 +1,142 @@
+<div id="primary">
+    <div class="ht-container">
+        <section id="content" class="centered-content main-page-content" role="main">
+            <br>
+            {{#if en}}
+                <header id="page-header"><h1 class="page-title text-center">Preparing for technical interview is super
+                    easy with Interview <span class="grey">Helper</span></h1>
+                </header>
+                <div id="homepage-categories" class="clearfix">
+                    <div class="row">
+                        <p>
+                            Here at <b>interviewhelper.org</b> you can find a lot of interview questions on various
+                            technologies
+                            and programming languages. Our interview questions is compiled by skilled programmers with
+                            significant experience in passing and making technical interview.
+                            <br>
+
+                        </p>
+                        <h4>Pros of preparing for interview here:</h4>
+                        <ul class="circled-list">
+                            <li>opportunity to refresh your knowledge</li>
+                            <li>you don't need to read whole API documentations, so you will save a lot of time</li>
+                            <li>discover new tricky concepts,edge cases and features of frameworks,programming languages
+                            </li>
+                            <li>be aware about most frequent interview questions</li>
+                        </ul>
+                    </div>
+                </div>
+            {{/if}}
+
+            {{#if ru}}
+                <header id="page-header"><h1 class="page-title text-center">Подготовся к техническому интервью вместе с
+                    Interview <span class="grey">Helper</span></h1>
+                </header>
+                <div id="homepage-categories" class="clearfix">
+                    <div class="row">
+                        <p>
+                            Здесь на <b>interviewhelper.org</b> вы можете найти много вопросов на собеседовании по
+                            различным
+                            технологиям и языкам программирования. Наши вопросы для интервью составлены опытными
+                            программистами, имеющими значительный опыт прохождения и проведения технического
+                            собеседования.
+                            <br>
+
+                        </p>
+                        <h4>Плюсы подготовки к собеседованию здесь:</h4>
+                        <ul class="circled-list">
+                            <li>возможность обновить свои знания</li>
+                            <li>вам не нужно читать всю документацию API, так что вы сэкономите много времени</li>
+                            <li>откройте для себя новые сложные концепции, крайние случаи и особенности фреймворков,
+                                языков
+                                программирования
+                            </li>
+                            <li>будите в курсе наиболее частых вопросов интервью</li>
+                        </ul>
+                    </div>
+                </div>
+            {{/if}}
+            <div class="row">
+                <h2 class="text-center">
+                    {{#if en}}Available programing languages, frameworks, technologies :{{/if}}
+                    {{#if ru}}Доступны материалы для таких технологий:{{/if}}
+
+                </h2>
+
+            </div>
+            <div class="row ">
+                <div class="category-item">
+                    <a href="/{{#if en}}en{{else}}ru{{/if}}/category/frameworks/node-js">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/320px-Node.js_logo.svg.png"
+                             alt="node.js logo">
+                        <span class="caption">Node.js</span>
+                    </a>
+                </div>
+
+                <div class="category-item">
+                    <a href="/{{#if en}}en{{else}}ru{{/if}}/category/frameworks/vue-js">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/277px-Vue.js_Logo_2.svg.png"
+                             alt="vue logo">
+                        <span class="caption">Vue.js</span>
+                    </a>
+                </div>
+
+                <div class="category-item">
+                    <a href="/{{#if en}}en{{else}}ru{{/if}}/category/frameworks/firebase">
+                        <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_1490630196/firebase.png"
+                             alt="Firebase logo">
+                        <span class="caption">Firebase</span>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="/{{#if en}}en{{else}}ru{{/if}}/category/programming-languages/typescript">
+                        <img src="https://rynop.files.wordpress.com/2016/09/ts.png?w=816" alt="typescript logo">
+                        <span class="caption">TypeScript</span>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="/{{#if en}}en{{else}}ru{{/if}}/category/programming-languages/javascript">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/240px-Unofficial_JavaScript_logo_2.svg.png"
+                             alt="js logo">
+                        <span class="caption">JavaScript</span>
+                    </a>
+                </div>
+
+                <div class="category-item">
+                    <a href="/{{#if en}}en{{else}}ru{{/if}}/category/frameworks/react-js">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png"
+                             alt="Firebase logo">
+                        <span class="caption">React.js</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </section>
+        <!--<aside id="sidebar" role="complementary">-->
+        <!--<div id="categories-3" class="widget widget_categories clearfix"><h4 class="widget-title">-->
+        <!--<span>{{translations.categories}}</span>-->
+        <!--</h4>-->
+        <!--<ul>-->
+            <!--{{#each categories}}-->
+        <!--<li class="cat-item cat-item-2"><a href="{{#if ../lang}}/{{../lang}}{{/if}}/category/{{slug}}"-->
+        <!--title="{{name}}">{{name}}</a> <span> </span></li>-->
+            <!--{{/each}}-->
+
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div id="st_popular_articles_widget-2" class="widget st_popular_articles_widget clearfix">-->
+        <!--<h4 class="widget-title"><span>{{translations.latest}}</span></h4>-->
+        <!--<ul class="clearfix">-->
+            <!--{{#each questions}}-->
+        <!--<li class="clearfix format-standard"><a-->
+        <!--href="/{{../lang}}/question/{{slug}}" rel="bookmark">{{title}}, {{date}}</a></li>-->
+            <!--{{/each}}-->
+        <!--</ul>-->
+        <!--</div>-->
+
+        <!--</aside>-->
+    </div>
+</div>
+

@@ -1,0 +1,133 @@
+<div class="row ">
+
+    <div class="col-xs-3" style="pointer-events: none; ">
+        <a href="" class="tile-box tile-box-alt btn-default not-active" style="padding-bottom: 30px;">
+            <div class="tile-header">
+                CPU usage
+            </div>
+            <div class="tile-content-wrapper">
+                <div class="chart-alt-10 easyPieChart" easypiechart percent="data.cpu" options="cpuOptions"
+                     style="width: 100px; height: 100px; line-height: 100px;"><span>{[{data.cpu| limitTo:5}]}</span>%
+                    <canvas width="100" height="100"></canvas>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-xs-3" style="pointer-events: none; ">
+        <a href="" class="tile-box tile-box-alt btn-default not-active" style="padding-bottom: 30px;">
+            <div class="tile-header">
+                Disk {[{data.disk.used/1024|toMB}]} of {[{data.disk.total/1024|toMB}]}
+            </div>
+            <div class="tile-content-wrapper">
+                <div class="chart-alt-10 easyPieChart" easypiechart percent="data.disk_percent" options="cpuOptions"
+                     style="width: 100px; height: 100px; line-height: 100px;">
+                    <span>{[{data.disk_percent| limitTo:2}]}</span>%
+                    <canvas width="100" height="100"></canvas>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-3" style="pointer-events: none; ">
+        <a href="" class="tile-box tile-box-alt btn-default not-active" style="padding-bottom: 30px;">
+            <div class="tile-header">
+                Memory
+            </div>
+            <div class="tile-content-wrapper">
+                <div class="chart-alt-10 easyPieChart" easypiechart percent="data.mem_percent" options="cpuOptions"
+                     style="width: 100px; height: 100px; line-height: 100px;">
+                    <span>{[{data.mem_percent| limitTo:2}]}</span>%
+                    <canvas width="100" height="100"></canvas>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-3" style="pointer-events: none; ">
+        <a href="" class="tile-box tile-box-alt btn-default not-active" style="padding-bottom: 30px;">
+            <div class="tile-header">
+                Network trafic
+            </div>
+            <div class="tile-content-wrapper">
+                <div class="chart-alt-10 easyPieChart" style="width: 90%; height: 100px; line-height: 100px;">
+                    <p style="font-size: 16px;"><i class="fa fa-cloud-download" style="color: green"
+                                                   aria-hidden="true"></i> - {[{data.net.rx_sec/1024|toMB}]}/s</p>
+                    <p style="font-size: 16px;"><i class="fa fa-cloud-upload" style="color: red" aria-hidden="true"></i>
+                        - {[{data.net.tx_sec/1024|toMB }]}/s</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="row" style="margin-top:15px;">
+
+
+    <div class="col-xs-6">
+        <div class="content-box">
+            <h3 class="content-box-header bg-default">
+                <i class="glyph-icon icon-cog"></i>
+                CPU usage in %
+
+            </h3>
+            <div class="content-box-wrapper">
+                <div id="data-example-3" style="width: 100%; height: 250px; padding: 0px; position: relative;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3" style="pointer-events: none; ">
+        <a href="" class="tile-box tile-box-alt btn-default not-active" style="padding-bottom: 30px;">
+            <div class="tile-header">
+                Memory Stats
+            </div>
+            <div class="tile-content-wrapper">
+                <div class="chart-alt-10 easyPieChart" style="width: 90%; height: 100px; line-height: 100px;">
+                    <p style="font-size: 16px;">
+                        Free: {[{data.memory.free/1024|toMB}]}</p>
+
+                    <p style="font-size: 16px;">
+                        Used: {[{data.memory.used/1024|toMB}]}</p>
+                    <p style="font-size: 16px;"> Total: {[{data.memory.total/1024|toMB}]}</p>
+
+                    <p style="font-size: 16px;">
+                        Swap : {[{data.memory.swapused/1024|toMB}]} from {[{data.memory.swaptotal/1024|toMB}]}</p>
+                    <p style="font-size: 16px;"> Total: {[{data.memory.total/1024|toMB}]}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" ng-if="stats && stats.collections">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Num. of docs</th>
+                    <th>Size</th>
+
+                    <th>Storage size</th>
+
+                    <th>Index size</th>
+
+                    <th>Avg. obj. size</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in stats.collections ">
+                    <td>{[{item.ns }]}</td>
+                    <td>{[{item.count }]}</td>
+                    <td>{[{item.size/1024 | toMB}]}</td>
+                    <td>{[{item.storageSize/1024 | toMB}]}</td>
+                    <td>{[{item.totalIndexSize/1024 | toMB}]}</td>
+                    <td>{[{item.avgObjSize/1024 | toMB}]}</td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div id="primary" class="sidebar-right clearfix">
+    <div class="ht-container">
+        <section id="content" role="main">
+            <header id="page-header"><h2 class="page-title"> {{translations.quizzes_categories}}</h2></header>
+            <div id="homepage-categories" class="clearfix">
+
+                <div class="row">
+
+                    {{#each categories}}
+
+                        <div class="column col-half 1"><h3><a
+                                href="{{#if ../lang}}/{{../lang}}{{/if}}/quiz-category/{{slug}}"
+                                title="">{{name}}</a><span class="cat-count"> </span>
+                        </h3>
+                            <ul class="category-posts">
+                                {{#each children}}
+
+                                    <li class="format-standard"><a
+                                            href="{{#if
+                                                    ../../lang}}/{{../../lang}}{{/if}}/quiz-category/{{../slug}}/{{slug}}"> {{name}}</a>
+                                    </li>
+                                {{/each}}
+
+
+                            </ul>
+                        </div>
+                    {{/each}}
+
+
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+</div>
+

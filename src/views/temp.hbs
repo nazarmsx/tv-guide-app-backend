@@ -1,0 +1,201 @@
+["b",["b","d"],"b","a",["a","b","d","f"],"b","a","a","c","b",["a","c","d","e"],"c","b","d","a"]
+<!-- Question 1 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">1. What should be the first parameter of a callback function?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q1" value="a"> result of a function</label></li>
+            <li><label><input type="radio" name="q1" value="b"> error if occurred or null </label></li>
+            <li><label><input type="radio" name="q1" value="c"> status code</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 2 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">2. Which file functions <b>Node.js</b> File API provides ?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q2" value="a"> fs.removeFileSync</label></li>
+            <li><label><input type="checkbox" name="q2" value="b"> fs.write</label></li>
+            <li><label><input type="checkbox" name="q2" value="c"> fs.closeFile</label></li>
+            <li><label><input type="checkbox" name="q2" value="d"> fs.readFileSync</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 3 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">3. Is <b>Node.js</b> platform multithreaded?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q3" value="a"> Yes. You can run JS code in multiple threads.</label>
+            </li>
+            <li><label><input type="radio" name="q3" value="b"> No. Node is single-threaded execution
+                environment.</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 4 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">4. How to stop <b>Node</b> application?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q4" value="a"> process.exitCode = 1;</label></li>
+            <li><label><input type="radio" name="q4" value="b"> process.exit(1)</label></li>
+            <li><label><input type="radio" name="q4" value="c"> let a; a.prop;</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 5 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">5. Which of this stream types exist in <b>Node</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q5" value="a"> readable</label></li>
+            <li><label><input type="checkbox" name="q5" value="b"> writable</label></li>
+            <li><label><input type="checkbox" name="q5" value="c"> streamable</label></li>
+            <li><label><input type="checkbox" name="q5" value="d"> duplex</label></li>
+            <li><label><input type="checkbox" name="q5" value="e"> compressible</label></li>
+            <li><label><input type="checkbox" name="q5" value="f"> transform</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 6 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">6. Why it's recommended to avoid usage of long running sync functions ?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q6" value="a"> Synchronous functions use more system resources.</label>
+            </li>
+            <li><label><input type="radio" name="q6" value="b"> Synchronous function blocks Event loop and stops all
+                other code execution in your program.</label></li>
+            <li><label><input type="radio" name="q6" value="c"> Sync functions may leads to callback hell.</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 7 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">7. In what order program will print results?</div>
+    <pre class="code javascript">
+        setTimeout(() => console.log("setTimeout"), 0);
+        setImmediate(() => console.log("setImmediate"));
+        process.nextTick(() => console.log("nextTick"));</pre>
+
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q7" value="a"> nextTick,setTimeout,setImmediate</label></li>
+            <li><label><input type="radio" name="q7" value="b"> setImmediate,nextTick,setTimeout</label></li>
+            <li><label><input type="radio" name="q7" value="c"> setTimeout,nextTick,setImmediate</label></li>
+            <li><label><input type="radio" name="q7" value="d"> setTimeout,setImmediate,nextTick</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 8 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">8. What is <b>EventEmitter</b>class?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q8" value="a"> EventEmitter is base class of all objects that emits
+                events in Node.js.</label></li>
+            <li><label><input type="radio" name="q8" value="b"> Class that provides API for handling OS events.</label>
+            </li>
+            <li><label><input type="radio" name="q8" value="c"> Built-in class responsible for handling HTTP
+                events.</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 9 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">9. How to increase heap limit in <b>Node.js</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q9" value="a"> There is no need to increase heap limit. Node
+                automatically allocate additional RAM if needed. </label></li>
+            <li><label><input type="radio" name="q9" value="b"> Use process.requestMemory method</label></li>
+            <li><label><input type="radio" name="q9" value="c"> Pass --max-old-space-size=2048 argument at
+                launch</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 10 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">10. How to run <b>Node</b> script/server in production mode?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q10" value="a"> Start app using npm script. </label></li>
+            <li><label><input type="radio" name="q10" value="b"> Set NODE_ENV environment variable to "production"
+                before launch</label></li>
+            <li><label><input type="radio" name="q10" value="c"> Use process.setEnvVariable method.</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 11 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">11. Which of these functions could be used to write files?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q11" value="a"> fs.writeFile</label></li>
+            <li><label><input type="checkbox" name="q11" value="b"> fs.replaceFileContents</label></li>
+            <li><label><input type="checkbox" name="q11" value="c"> fs.createWriteStream</label></li>
+            <li><label><input type="checkbox" name="q11" value="d"> fs.writeFileSync</label></li>
+            <li><label><input type="checkbox" name="q11" value="e"> fs.write</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 12 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">12. What is recommended way to include third-party libs to <b>Node</b> project?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q12" value="a"> Libs should be connected as git modules. </label></li>
+            <li><label><input type="radio" name="q12" value="b"> Bower package manager</label></li>
+            <li><label><input type="radio" name="q12" value="c"> External packages should installed via NPM. All
+                dependencies should be listed in package.json file.</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 13 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">13. What default encoding is set in <i>fs.writeFile</i> function?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q13" value="a"> base64 </label></li>
+            <li><label><input type="radio" name="q13" value="b"> utf8/utf-8</label></li>
+            <li><label><input type="radio" name="q13" value="c"> binary</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 14 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">14. How to check whether process is master or slave in <b>"cluster"</b> module?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q14" value="a"> cluster.isMainProcess </label></li>
+            <li><label><input type="radio" name="q14" value="b"> process.isMain</label></li>
+            <li><label><input type="radio" name="q14" value="c"> cluster.isMasterProcess</label></li>
+            <li><label><input type="radio" name="q14" value="d"> cluster.isMaster</label></li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- Question 15 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">15. What is default module concept for <b>Node.js</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q15" value="a"> CommonJS </label></li>
+            <li><label><input type="radio" name="q15" value="b"> AMD</label></li>
+            <li><label><input type="radio" name="q15" value="d"> UMD </label></li>
+
+        </ul>
+    </div>
+</div>

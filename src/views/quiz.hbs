@@ -1,0 +1,158 @@
+<div id="primary" class="sidebar-right clearfix">
+    <div class="ht-container">
+        <section id="content" role="main">
+            <header id="page-header" class="clearfix"><h1 class="page-title">{{question.title}}</h1>
+                <div id="breadcrumbs"><a href="{{#if lang}}/{{lang}}{{/if}}/">
+                    <icon class="fa fa-home"></icon>
+                </a><span class="sep">/</span>
+                    {{#each breadcrumbs}}
+                        <a href="{{link}}">{{name}}</a>
+                        <span class="sep">/</span>
+                    {{/each}}
+
+                    {{question.title}}
+                </div>
+            </header>
+
+
+            <ul class="entry-meta clearfix">
+                <li class="date" style="text-transform: capitalize;"><i class="fa fa-time"></i>
+                    <time datetime="{{date_year question.updated }}">{{question.date}}</time>
+                </li>
+                <li class="author"><i class="fa fa-user"></i> Admin</li>
+
+                <li class="comments"><i class="fa fa-comment"></i> <a
+                        href="#disqus_thread">0 Comments </a>
+                </li>
+            </ul>
+            <div id="quiz-result" class="card">
+                {{translations.your_score}} <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span
+                    id="quiz-max-score"></span><br/>
+            </div>
+            <div id="quiz-div">
+                {{{question.contents}}}
+            </div>
+            <div class="btn-container">
+                <button type="button" class="check-answers-btn"
+                        onclick="showResults();">{{translations.check_answers}}</button>
+            </div>
+            <div>
+                <div>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- bottom_interview -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-7240156011300980"
+                         data-ad-slot="2669814657"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div>
+                <div id="disqus_thread"></div>
+            </div>
+
+        </section>
+        <aside id="sidebar" role="complementary">
+            <div id="categories-3" class="widget widget_categories clearfix">
+                <div class="row">
+                    <h4>{{translations.share}}</h4>
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="{{canonical_link}}"
+                         data-a2a-title="{{question.title}}">
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_telegram"></a>
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    </div>
+                </div>
+
+
+            </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- sidebar_interview -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7240156011300980"
+                 data-ad-slot="7291585945"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+
+        </aside>
+    </div>
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+<script async src="/include/quizlib.1.0.1.min.js"></script>
+<link rel="stylesheet" href="/include/quizlib.min.css">
+
+<script>
+    window.onload = function (event) {
+        window.quiz = new Quiz('quiz-div', {{{question.answers}}});
+        window.quiz.unansweredQuestionText = "{{translations.unAnsweredQuestion}}";
+        document.querySelectorAll('#content pre.code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    };
+
+    function myHandleAnswerMethod(quiz, question, no, correct) {
+        if (!correct) {
+            // Highlight the correct answers.
+            // See the example code on GitHub for an example implementation.
+        }
+    }
+
+    function showResults() {
+        // Check answers and continue if all questions have been answered
+        if (quiz.checkAnswers()) {
+            var quizScorePercent = quiz.result.scorePercentFormatted; // The unformatted percentage is a decimal in range 0 - 1
+            var quizResultElement = document.getElementById('quiz-result');
+            quizResultElement.style.display = 'block';
+            document.getElementById('quiz-score').innerHTML = quiz.result.score.toString();
+            document.getElementById('quiz-max-score').innerHTML = quiz.result.totalQuestions.toString();
+            document.getElementById('quiz-percent').innerHTML = quizScorePercent.toString();
+
+            // Change background colour of results div according to score percent
+            if (quizScorePercent >= 75) quizResultElement.style.backgroundColor = '#4caf50';
+            else if (quizScorePercent >= 50) quizResultElement.style.backgroundColor = '#ffc107';
+            else if (quizScorePercent >= 25) quizResultElement.style.backgroundColor = '#ff9800';
+            else if (quizScorePercent >= 0) quizResultElement.style.backgroundColor = '#f44336';
+
+            // Highlight questions according to whether they were correctly answered. The callback allows us to highlight/show the correct answer
+            quiz.highlightResults(handleAnswers);
+        }
+        window.scrollTo(0, 0)
+
+    }
+
+    function handleAnswers(quiz, question, no, correct) {
+        if (!correct) {
+            var answers = question.getElementsByTagName('input');
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i].type === "checkbox" || answers[i].type === "radio") {
+                    // If the current input element is part of the correct answer, highlight it
+                    if (quiz.answers[no].indexOf(answers[i].value) > -1) {
+                        answers[i].parentNode.classList.add(Quiz.Classes.CORRECT);
+                    }
+                } else {
+                    // If the input is anything other than a checkbox or radio button, show the correct answer next to the element
+                    var correctAnswer = document.createElement('span');
+                    correctAnswer.classList.add(Quiz.Classes.CORRECT);
+                    correctAnswer.classList.add(Quiz.Classes.TEMP); // quiz.checkAnswers will automatically remove elements with the temp class
+                    correctAnswer.innerHTML = quiz.answers[no];
+                    correctAnswer.style.marginLeft = '10px';
+                    answers[i].parentNode.insertBefore(correctAnswer, answers[i].nextSibling);
+                }
+            }
+        }
+    }
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>

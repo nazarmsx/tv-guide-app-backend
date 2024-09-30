@@ -1,0 +1,42 @@
+<div id="primary" class="sidebar-right clearfix">
+    <div class="ht-container">
+        <section id="content" role="main">
+            <header id="page-header"><h1 class="page-title">
+                {{#if en}}
+                    <span>{{title}}</span> {{translations.quizzes_category}}
+                {{/if}}
+                {{#if ru}}
+                    {{translations.quizzes_category}} <span>{{title}}</span>
+                {{/if}}
+            </h1>
+                <div id="breadcrumbs">
+                    <a href="/">
+                        <icon class="fa fa-home"></icon>
+                    </a>
+                    <span class="sep">/</span>
+
+                    {{#each breadcrumbs}}
+                        <a href="{{link}}">{{name}}</a>
+                        <span class="sep">/</span>
+                    {{/each}}
+
+                </div>
+            </header>
+
+            {{#each questions}}
+
+                <article
+                        class="clearfix post-62 post type-post status-publish format-standard hentry category-api-questions tag-api tag-developers">
+                    <h2 class="entry-title">
+                        <a href="/{{../lang}}/quiz/{{viewData.slug}}">{{viewData.title}}</a>
+                    </h2>
+                    <div class="entry-content"></div>
+                    <a href="/{{../lang}}/question/{{viewData.slug}}" class="readmore" title="{{viewData.title}}">Read
+                        More<span> →</span></a>
+                </article>
+            {{/each}}
+
+        </section>
+
+    </div>
+</div>

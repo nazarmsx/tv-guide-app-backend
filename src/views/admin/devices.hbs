@@ -1,0 +1,83 @@
+<div class="row">
+
+    <div id="page-title">
+        <div class="col-xs-8">
+            <h2 class="pull-left">Devices</h2>
+
+        </div>
+        <div class="col-xs-4">
+            <div class="form-group pull-right">
+
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" ng-model="searchFish" placeholder="Search">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-xs-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th ng-click="sortType = 'id'; sortReverse = !sortReverse">
+                        UUID
+                        <span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
+                    </th>
+                    <th ng-click="sortType = 'login'; sortReverse = !sortReverse">
+                        OS
+                        <span ng-show="sortType == 'login' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'login' && sortReverse" class="fa fa-caret-up"></span>
+                    </th>
+                    <th ng-click="sortType = 'mail'; sortReverse = !sortReverse">
+                        Region
+                        <span ng-show="sortType == 'mail' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'mail' && sortReverse" class="fa fa-caret-up"></span>
+                    </th>
+
+                    <th>Created At</th>
+
+                    <th>Last Active</th>
+
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in items">
+                    <td>{[{item.uuid }]}</td>
+                    <td>{[{item.platform }]}</td>
+                    <td>{[{item.region}]}</td>
+
+                    <td>{[{item.createdAt | date:"MM/dd/yyyy 'at' h:mma"}]}</td>
+                    <td>{[{item.lastSeen | date:"MM/dd/yyyy 'at' h:mma"}]}</td>
+
+                    <td>
+                        <button type="button" ng-click="editItem(item)" class="btn btn-success btn-circle">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-danger ">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+
+
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <uib-pagination rotate="false" max-size="10" total-items="totalItems" force-ellipses="true"
+                        ng-model="currentPage"></uib-pagination>
+
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

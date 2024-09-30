@@ -1,0 +1,205 @@
+["b",["b","d"],"b","a",["a","b","d","f"],"b","a","a","c","b",["a","c","d","e"],"c","b","d","a"]
+<!-- Question 1 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">1. Каким должен быть первый параметр функции обратного вызова(callback)?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q1" value="a"> результат функции</label></li>
+            <li><label><input type="radio" name="q1" value="b"> ошибка, если произошла или null </label></li>
+            <li><label><input type="radio" name="q1" value="c"> код состояния</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 2 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">2. Какие файловые функции предоставляет модуль ("fs") в <b>Node.js</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q2" value="a"> fs.removeFileSync</label></li>
+            <li><label><input type="checkbox" name="q2" value="b"> fs.write</label></li>
+            <li><label><input type="checkbox" name="q2" value="c"> fs.closeFile</label></li>
+            <li><label><input type="checkbox" name="q2" value="d"> fs.readFileSync</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 3 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">3. Является ли <b>Node.js</b> многопоточной платформой?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q3" value="a"> Да. Вы можете запустить код JS в нескольких
+                потоках.</label></li>
+            <li><label><input type="radio" name="q3" value="b"> Node - это однопоточная среда исполнения.</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 4 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">4. Как остановить <b>Node</b> приложения?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q4" value="a"> process.exitCode = 1;</label></li>
+            <li><label><input type="radio" name="q4" value="b"> process.exit(1)</label></li>
+            <li><label><input type="radio" name="q4" value="c"> let a; a.prop;</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 5 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">5. Какие из этих типов потоков(stream) существуют в <b>Node</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q5" value="a"> readable</label></li>
+            <li><label><input type="checkbox" name="q5" value="b"> writable</label></li>
+            <li><label><input type="checkbox" name="q5" value="c"> streamable</label></li>
+            <li><label><input type="checkbox" name="q5" value="d"> duplex</label></li>
+            <li><label><input type="checkbox" name="q5" value="e"> compressible</label></li>
+            <li><label><input type="checkbox" name="q5" value="f"> transform</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 6 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">6.Почему рекомендуется избегать использования долго выполняющихся синхронных
+        функций?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q6" value="a"> Синхронные функции используют больше системных ресурсов.</label>
+            </li>
+            <li><label><input type="radio" name="q6" value="b"> Синхронная функция блокирует цикл обработки событий и
+                останавливает выполнение всего остального кода в вашей программе.</label></li>
+            <li><label><input type="radio" name="q6" value="c"> Функции синхронизации могут привести к callback
+                hell.</label></li>
+        </ul>
+    </div>
+</div>
+<!-- Question 7 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">7.В каком порядке программа будет выведет результаты?</div>
+    <pre class="code javascript">
+        setTimeout(() => console.log("setTimeout"), 0);
+        setImmediate(() => console.log("setImmediate"));
+        process.nextTick(() => console.log("nextTick"));</pre>
+
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q7" value="a"> nextTick,setTimeout,setImmediate</label></li>
+            <li><label><input type="radio" name="q7" value="b"> setImmediate,nextTick,setTimeout</label></li>
+            <li><label><input type="radio" name="q7" value="c"> setTimeout,nextTick,setImmediate</label></li>
+            <li><label><input type="radio" name="q7" value="d"> setTimeout,setImmediate,nextTick</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 8 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">8. За что отвечает класс <b>EventEmitter</b> ?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q8" value="a"> EventEmitter - это базовый класс всех объектов, которые
+                генерируют события в Node.js.</label></li>
+            <li><label><input type="radio" name="q8" value="b"> Класс, предоставляющий API для обработки событий
+                операционной системы.</label></li>
+            <li><label><input type="radio" name="q8" value="c"> Встроенный класс, отвечающий за обработку HTTP-событий.</label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 9 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">9. Как увеличить лимит кучи в <b>Node.js</b>?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q9" value="a"> Нет необходимости увеличивать лимит кучи. Node атомно
+                выделяет дополнительную оперативную память при необходимости. </label></li>
+            <li><label><input type="radio" name="q9" value="b"> Используйте метод process.requestMemory</label></li>
+            <li><label><input type="radio" name="q9" value="c"> Передайте аргумент командной строки
+                --max-old-space-size=2048 при запуске приложения</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 10 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">10. Как запустить <b>Node</b> скрипт/сервер в production режиме?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q10" value="a"> Запустить приложения через npm скрипт. </label></li>
+            <li><label><input type="radio" name="q10" value="b"> Установить переменную среды виполнения NODE_ENV в
+                "production" перед запуском</label></li>
+            <li><label><input type="radio" name="q10" value="c"> Использовать метод process.setEnvVariable.</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 11 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">11. Какие из этих функций можно использовать для записи файлов?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="checkbox" name="q11" value="a"> fs.writeFile</label></li>
+            <li><label><input type="checkbox" name="q11" value="b"> fs.replaceFileContents</label></li>
+            <li><label><input type="checkbox" name="q11" value="c"> fs.createWriteStream</label></li>
+            <li><label><input type="checkbox" name="q11" value="d"> fs.writeFileSync</label></li>
+            <li><label><input type="checkbox" name="q11" value="e"> fs.write</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 12 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">12. Каков рекомендуемый способ включения сторонних библиотек в проект на
+        <b>Node</b>?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q12" value="a"> Библиотеки должны быть подключены как модули git..
+            </label></li>
+            <li><label><input type="radio" name="q12" value="b"> Bower package manager</label></li>
+            <li><label><input type="radio" name="q12" value="c"> Внешние пакеты должны быть установлены через NPM. Все
+                зависимости должны быть перечислены в файле package.json.</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 13 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">13. Какая кодировка по умолчанию установлена в функции<i>fs.writeFile</i> ?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q13" value="a"> base64 </label></li>
+            <li><label><input type="radio" name="q13" value="b"> utf8/utf-8</label></li>
+            <li><label><input type="radio" name="q13" value="c"> binary</label></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Question 14 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">14. Как проверить, является ли процесс главным или подчиненным в модуле<b>"cluster"</b>?
+    </div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q14" value="a"> cluster.isMainProcess </label></li>
+            <li><label><input type="radio" name="q14" value="b"> process.isMain</label></li>
+            <li><label><input type="radio" name="q14" value="c"> cluster.isMasterProcess</label></li>
+            <li><label><input type="radio" name="q14" value="d"> cluster.isMaster</label></li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- Question 15 -->
+<div class="card quizlib-question">
+    <div class="quizlib-question-title">15. Какая концепция модулей используэться в <b>Node.js</b> по умолчанию?</div>
+    <div class="quizlib-question-answers">
+        <ul>
+            <li><label><input type="radio" name="q15" value="a"> CommonJS </label></li>
+            <li><label><input type="radio" name="q15" value="b"> AMD</label></li>
+            <li><label><input type="radio" name="q15" value="d"> UMD </label></li>
+        </ul>
+    </div>
+</div>

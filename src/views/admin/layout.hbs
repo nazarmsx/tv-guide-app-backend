@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en" class="sb-init">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <!--[if IE]>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <![endif]-->
+
+    <title> Home | Interviewhelper Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <link rel="stylesheet" type="text/css" href="/vendors/admin/admin-all-demo.css">
+    <link rel="stylesheet" href="/vendors/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="/vendors/admin/js-core.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#loading').fadeOut(400, "linear");
+            }, 300);
+        });
+    </script>
+
+
+<body ng-app="myApp">
+<div id="sb-site">
+
+
+    <div id="loading" style="display: block;">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <div style="height: 200px;"></div>
+        <div class="loader2">Loading...</div>
+    </div>
+
+    <div id="page-wrapper">
+        <div id="page-header" class="bg-gradient-9" style="display: none" ng-class=" {'visible':activeView!='login'}">
+            <div id="mobile-navigation">
+                <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar">
+                    <span></span></button>
+                <a href="https://agileui.com/demo/monarch/demo/admin-template/index.html" class="logo-content-small"
+                   title="MonarchUI"></a>
+            </div>
+            <div id="header-logo" class="logo-bg">
+                <a href="https://agileui.com/demo/monarch/demo/admin-template/index.html" class="logo-content-big"
+                   title="MonarchUI">
+                    Monarch <i>UI</i>
+                    <span>The perfect solution for user interfaces</span>
+                </a>
+                <a href="https://agileui.com/demo/monarch/demo/admin-template/index.html" class="logo-content-small"
+                   title="MonarchUI">
+                    Monarch <i>UI</i>
+                    <span>The perfect solution for user interfaces</span>
+                </a>
+                <a id="close-sidebar" href="https://agileui.com/demo/monarch/demo/admin-template/index.html#"
+                   title="Close sidebar">
+                    <i class="glyph-icon icon-angle-left"></i>
+                </a>
+            </div>
+            <div id="header-nav-left">
+
+                <div class="user-account-btn dropdown">
+                    <a href="" title="My Account" class="user-profile clearfix" data-toggle="dropdown">
+                        <img width="28" src="/images/user_icon.png" alt="Profile image">
+                        <span>{[{user.login}]}</span>
+                        <i class="glyph-icon icon-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu float-left">
+                        <div class="box-sm">
+                            <div class="login-box clearfix">
+                                <div class="user-img">
+                                    <a href="https://agileui.com/demo/monarch/demo/admin-template/index.html#" title=""
+                                       class="change-img">Change photo</a>
+                                    <img src="/images/user_icon.png" alt="">
+                                </div>
+                                <div class="user-info">
+                            <span>
+                                {[{user.login}]}
+                                <i>GamedDev Store Admin</i>
+                            </span>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+
+                            <div class="pad5A button-pane button-pane-alt text-center">
+                                <a href="" data-ng-click="logout()" class="btn display-block font-normal btn-danger">
+                                    <i class="glyph-icon icon-power-off"></i>
+                                    Log out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- #header-nav-left -->
+
+            <div id="header-nav-right">
+
+
+                <a class="header-btn" id="logout-btn" ng-click="logout()" role="button" title="Log out">
+                    <i class="glyph-icon icon-linecons-lock"></i>
+                </a>
+
+            </div><!-- #header-nav-right -->
+
+        </div>
+        <div id="page-sidebar" ng-class=" {'visible':activeView!='login'}" style="display: none;"
+             style="height: 1632px;">
+            <div class="scroll-sidebar" style="height: 1632px;">
+
+
+                <ul id="sidebar-menu" class="sf-js-enabled sf-arrows">
+                    <li class="header"><span>Overview</span></li>
+                    <li>
+                        <a ui-sref="dashboard" title="Dashboard" class="sfActive">
+                            <i class="glyph-icon fa fa-tachometer "></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="logs"><i class=" glyph-icon fa-terminal"></i> <span>Logs</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="questions"><i class=" glyph-icon fa-question-circle"></i> <span>Questions</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="quizzes"><i class=" glyph-icon fa-book"></i> <span>Quizzes</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="categories"><i class=" glyph-icon fa fa-bars"></i> <span>Categories</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="devices"><i class="glyph-icon fa fa-mobile"></i> <span>Devices</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="users"><i class="glyph-icon fa fa-users"></i> <span>Users</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="program"><i class="glyph-icon fa fa-tv"></i> <span>Program</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="channels"><i class="glyph-icon fa fa-youtube"></i> <span>Channels</span></a>
+                    </li>
+
+                    <li>
+                        <a ui-sref="support"><i class="glyph-icon fa fa-life-ring"></i> <span>Support</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="actors"><i class="glyph-icon fa fa-star"></i> <span>Actors</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="languages"><i class=" glyph-icon fa fa-language "></i> <span>Languages</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="blog"><i class="glyph-icon fa fa-comment"></i> <span>Blog</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div id="page-content" style="max-height: 100vh;">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="/vendors/admin/admin-custom.css">
+<script src="/vendors/angular.min.js"></script>
+<script src="/vendors/jquery.min.js"></script>
+<script src="/vendors/ui-bootstrap-tpls.js"></script>
+<script src="/vendors/admin/angular-ui-router.min.js"></script>
+<link rel="stylesheet" href="/vendors/trix/trix.css" media="all" type="text/css">
+<script src="/vendors/trix/trix.js"></script>
+<script src="/vendors/trix/angular-trix.min.js"></script>
+<script src="/javascripts/admin/app.js"></script>
+<script type="text/javascript" src="/vendors/admin/flot.js"></script>
+<script src="/vendors/admin/angular.easypiechart.min.js"></script>
+<link rel="stylesheet" href="/vendors/ng-tags-input.min.css">
+<script type="text/javascript" src="/vendors/ng-tags-input.min.js"></script>
+<script type="text/javascript" src="/vendors/angular-animate.min.js"></script>
+<script type="text/javascript" src='/vendors/angular-sanitize.min.js'></script>
+<script src="/vendors/bootstrap.min.js"></script>
+<script src="/javascripts/admin/http.js"></script>
+<script src="/javascripts/common/notifications.js"></script>
+<script src="/javascripts/admin/loginCtrl.js"></script>
+<script src="/javascripts/admin/questionCtrl.js"></script>
+<script src="/javascripts/admin/dashboardCtrl.js"></script>
+<script src="/javascripts/admin/usersCtrl.js"></script>
+<script src="/javascripts/admin/blogCtrl.js"></script>
+<script src="/javascripts/admin/categoryCtrl.js"></script>
+<script src="/javascripts/admin/langCtrl.js"></script>
+<script src="/javascripts/admin/logsCtrl.js"></script>
+<script src="/javascripts/admin/actorsCtrl.js"></script>
+<script src="/javascripts/admin/devicesCtrl.js"></script>
+<script src="/javascripts/admin/supportCtrl.js"></script>
+<script src="/javascripts/admin/programCtrl.js"></script>
+<script src="/javascripts/admin/channelsCtrl.js"></script>
+<script src="/javascripts/admin/quizCtrl.js"></script>
+<script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.9.1/js/lib/beautify-html.js"></script>
+<script src="/vendors/bootstrap3-typeahead.min.js"></script>
+<script src="/vendors/ng-file-upload-all.min.js"></script>
+<link rel="stylesheet" href="/vendors/pnotify/pnotify.custom.min.css" media="all" type="text/css">
+<script src="/vendors/pnotify/pnotify.custom.min.js"></script>
+<style>
+    span.fr-sr-only {
+        display: none;
+    }
+</style>
+</body>
+</html>

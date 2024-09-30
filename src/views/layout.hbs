@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="{{#if lang}}{{lang}}{{else}}en-US{{/if}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width">
+    <title>{{title}}  | InterviewHelper</title>
+    {{#if NO_INDEX}}
+        <meta name="robots" content="noindex">
+    {{/if}}
+    {{#if keywords}}
+        <meta name="keywords" content="{{keywords}}">
+    {{else}}
+        <meta name="keywords" content="java interview,js interview, interview questions,firebase">
+    {{/if}}
+    <meta name="google-site-verification" content="d2VOSbF6G1wdzrjQmG-mvu1qRq53AubUY-20SaJEA7A"/>
+    <meta name="yandex-verification" content="7e5ff088b99b9df1"/>
+    {{#if description}}
+        <meta name="description" content="{{description}}">
+    {{/if}}
+    {{#if index}}
+        <meta name="robots" content="all"/>{{else}}
+        <meta name="robots" content="noindex"/>{{/if}}
+    {{#if lang}}
+        {{#if links}}
+            {{#each links}}
+                <link rel="alternate" href="{{../canonical}}{{link}}" hreflang="{{lang}}"/>
+            {{/each}}
+        {{else}}
+            <link rel="alternate" href="{{canonical}}/en/{{link}}" hreflang="en"/>
+            <link rel="alternate" href="{{canonical}}/ru/{{link}}" hreflang="ru"/>
+        {{/if}}
+        <link rel="alternate" href="{{canonical}}/{{link}}" hreflang="x-default"/>
+    {{/if}}
+    {{#if canonical_link}}
+        <link rel="canonical" href="{{canonical_link}}"/>
+    {{/if}}
+    {{#if social_meta}}
+        <meta name="twitter:card" value="{{title}}">
+        <!-- Open Graph data -->
+        <meta property="og:title" content="{{title}}"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:url" content="{{canonical_link}}"/>
+        <meta property="og:image" content="{{canonical}}/images/new_logo.png"/>
+        <meta property="og:description" content="{{description}}"/>
+        <meta property="og:site_name" content="InterviewHelper"/>
+    {{/if}}
+    <link rel="stylesheet" href="/include/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/vendors/css/font-awesome.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body class="home blog">
+<div id="site-container" class="clearfix">
+    <nav id="primary-nav-mobile"><a class="menu-toggle clearfix" href="{{#if lang}}/{{lang}}{{/if}}/"><i
+            class="fa fa-reorder"></i></a>
+        <ul id="mobile-menu" class="clearfix">
+            <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-178">
+                <a href="{{#if lang}}/{{lang}}{{/if}}/">Home </a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126">
+                <a href="{{#if lang}}/{{lang}}{{/if}}/categories">{{translations.categories}}</a></li>
+
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126">
+                <a href="{{#if lang}}/{{lang}}{{/if}}/quizzes">{{translations.quizzes}}</a></li>
+
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124">
+                <a href="{{#if lang}}/{{lang}}{{/if}}/about">{{translations.about}}</a></li>
+        </ul>
+    </nav>
+    <header id="site-header" class="clearfix" role="banner">
+        <div class="ht-container">
+            <div id="logo"><h1><a title="home" href="{{#if lang}}/{{lang}}{{/if}}/"> <img alt="main_logo"
+                                                                                          src="/images/interview_logo.png">
+            </a></h1></div>
+            <nav id="primary-nav" role="navigation" class="clearfix">
+                <ul id="menu-primary-nav" class="nav sf-menu clearfix sf-js-enabled">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-178">
+                        <a href="{{#if lang}}/{{lang}}{{/if}}/">{{translations.home_title}}</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom "><a
+                            href="{{#if lang}}/{{lang}}{{/if}}/categories">{{translations.categories}}</a></li>
+
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom "><a
+                            href="{{#if lang}}/{{lang}}{{/if}}/quizzes">{{translations.quizzes}}</a></li>
+
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                            href="{{#if lang}}/{{lang}}{{/if}}/about">{{translations.about}}</a></li>
+                    <li class="dropdown">
+                        <a type="button" class="btn btn-default dropdown-toggle lang-selector" data-toggle="dropdown"
+                           aria-expanded="false">{{lang}}</a>
+                        <ul class="dropdown-menu lang-select">
+                            {{#if links}}
+                                {{#each links}}
+                                    <li><a href="{{link}}">{{name}}</a></li>
+                                {{/each}}
+                            {{else}}
+                                <li><a href="/en/{{link}}">English</a></li>
+                                <li><a href="/ru/{{link}}">Русский</a></li>
+                            {{/if}}
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {{{body}}}
+    <!--<footer id="site-footer" class="clearfix" role="contentinfo">-->
+    <!--<div class="ht-container">-->
+    <!--</div>-->
+    <!--</footer>-->
+</div>
+
+
+<script id="dsq-count-scr" src="//interviewhelper.disqus.com/count.js" async></script>
+</body>
+<script type="text/javascript" src="/include/jquery.min.js"></script>
+
+<script type="text/javascript" src="/include/functions.min.js"></script>
+
+{{#if ANALYTICS_ENBALED}}
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript"> (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter43911734 = new Ya.Metrika({
+                    id: 43911734,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true,
+                    ut: "noindex"
+                });
+            } catch (e) {
+            }
+        });
+        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+            n.parentNode.insertBefore(s, n);
+        };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks"); </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/43911734?ut=noindex" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+{{/if}}
+
+</html>
